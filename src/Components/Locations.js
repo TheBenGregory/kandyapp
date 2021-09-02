@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react"
+import './Locations.css';
 
 export const Locations = () => {
     const [locations, assignLocation] = useState([])
@@ -23,13 +24,14 @@ return (
         
     <article className="locations">
                 <h2>Locations</h2>
+                <ul>
               {
                 locations.map(
                     (location) => {
-                        return <p key={`location--${location.id}`}>{location.city}</p> }
+                        return <li key={`location--${location.id}`}>{location.city}</li> }
                 )  
                 } 
-            
+            </ul>
             </article>
             </>
 )
